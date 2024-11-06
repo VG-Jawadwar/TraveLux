@@ -6,9 +6,8 @@ Welcome to **TraveLux**, your ultimate travel companion! This project is a web a
 - **User Login System**: Secure login for users to access personalized features.
 - **Travel Destination Recommendations**: Discover destinations tailored to user preferences.
 - **Itinerary Planning**: Create and manage trip itineraries with ease.
-- **Exclusive Offers**: Access discounts and special deals on flights, accommodations, and tours.
+- **Exclusive Offers**: Access discounts and special deals on tours.
 - **Logout Feature**: Simple logout functionality with a clean and modern icon.
-- **Responsive Design**: Works seamlessly across devices (desktop, tablet, mobile).
 
 ## Demo Credentials 🔑
 
