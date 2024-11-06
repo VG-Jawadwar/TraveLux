@@ -34,7 +34,7 @@ To run this project locally:
 
 1. **Clone the repository**:
 
-   git clone https://github.com/VG-Jawadwar/travelux.git
+   git clone https://github.com/VG-Jawadwar/TraveLux.git
 
 2. **Navigate to the project folder**:
 
