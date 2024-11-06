@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/Icon2.png" type="image/png">
+    <title>Contact Us</title>
+
+    <style>
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.left-col {
+  width: 45vw;
+  height: 100%;
+  background-image: url("https://comfortmytravel.com/wp-content/uploads/2021/02/1.jpg");
+  /* https://images.pexels.com/photos/931018/pexels-photo-931018.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500 */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  width: 10rem;
+  padding: 1.5rem;
+}
+
+.right-col {
+  background: var(--bg-color);
+  width: 50vw;
+  height: 100vh;
+  padding: 5rem 3.5rem;
+}
+
+h1, label, .button, .description {
+  font-family: 'Jost', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+p {
+  color:grey;
+  font-size: 0.9rem;
+  letter-spacing: 0.01rem;
+  width: 40vw;
+  margin: 0.25rem 0;
+}
+
+form {
+  width: 31.25rem;
+  position: relative;
+  margin-top: 2rem;
+  padding: 1rem 0;
+}
+
+input, textarea, label {
+  width: 40vw;
+  display: block;
+}
+
+p, input, textarea {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+input::placeholder, textarea::placeholder {
+  color: black;
+}
+
+input, textarea {
+  color: black;
+  font-weight: 500;
+  background: white;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  outline: #010712;
+}
+
+textarea {
+  resize: none;
+}
+
+.button {
+  text-transform: uppercase;
+  font-weight: 300;
+  background: black;
+  color: white;
+  width: 10rem;
+  height: 2.25rem;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+
+.button:active {
+  opacity: 0.8;
+}
+    </style>
+<script src="assets/js/main.js"></script>
+</head>
+
+<body oncontextmenu="alert('Right Click is Disabled!!!');return false">
+    <div class="contact-container">
+        <div class="left-col">
+        </div>
+        <div class="right-col">
+          <div class="theme-switch-wrapper">
+      </div>
+          
+          <h1>Contact us</h1>
+          <p>Fill out the form below to learn more.</p>
+          
+          <form id="contact-form" name = "myForm">
+            <label for="name">Full name</label>
+        <input type="text" id="Fname" name="name" placeholder="Your Full Name" required>
+            <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+            <label for="message">Message</label>
+        <textarea rows="6" placeholder="Your Message" id="message" name="message" required></textarea>
+        <input type="button" class = "button" id="submit" name="submit" value="send" onclick="Validate()">
+      </form>
+        </div>
+      </div>
+
+      <script src= "https://cdn.jsdelivr.net/npm/sweetalert2@10"> </script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10" />
+</body>
+</html>

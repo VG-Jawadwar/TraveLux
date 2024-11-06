@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/img/Icon2.png" type="image/png">
+    <title>Travel Around</title>
+</head>
+
+<body oncontextmenu="alert('Right Click is Disabled!!!');return false">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src = "assets/js/main.js" ></script>
+    <body  onload="document.myForm_index.mylist.selectedIndex=0;document.myForm_index.mylist_Days.selectedIndex=0">
+
+        <!--===========Nav Bar=================-->
+        <section class="nav-bar">
+            <div  class="logo" >TraveLux </div>
+            <ul class="menu">
+                <li><a id ="Home"  onclick="home()" href="#">home</a></li>
+                <li><a id ="tours" onclick="tours()" href="#">tours</a></li>
+                <li><a href="#" onclick="AboutUs()">About Us</a></li>
+                <li><a href="#" onclick="Contact()">contact us</a></li>
+                <li><a style = "color : red;" class = "logout" onclick="logout()"> Logout</a></li>
+            </ul>
+            </div>
+
+        </section>
+        <!--===============Banner================-->
+        <section id = "banner" class="banner">
+            <div class="banner-text-item">
+                <div class="banner-heading">
+                    <h1 id = "Btext"></h1>
+                </div>
+                <form name = "myForm_index" class="form">
+                    <select onchange="changecontent(this)" name="mylist" id="mylist">
+                        <option value="Kashmir">Kashmir</option>
+                        <option value="Ladakh">Ladakh</option>
+                        <option value="Udaipur" >Udaipur</option>
+                        <option value="Munnar" >Munnar</option>
+                        <option value="Andaman" >Andaman</option>
+                        <option value="Agra" >Agra</option>
+                        <option value="Manali" >Manali</option>
+                        <option value="Nashik" >Nashik</option>
+                    </select>
+                    <input type="date" class="date" id = "date">
+                    <!-- <input type="date" class="date" id = "enddate"> -->
+
+                    <select  name="mylist_Days" id="mylist_Days">
+                        <option value="Select Days">Select Days</option>
+                    </select>
+
+                    <input type="button" class="book" value="Book" onclick="openModel()">
+                </form>
+            </div>
+        </section>
+
+        <!--=========Services===============-->
+        <section class="services">
+            <div class="service-item">
+                <img src="https://img.freepik.com/premium-vector/professional-tour-guide-leading-sightseeing-trip-showing-pointing_1323048-1286.jpg?semt=ais_hybrid">
+                <h2>8000+ Our Local Guides</h2>
+            </div>
+            <div class="service-item">
+                <img src="https://thumbs.dreamstime.com/b/trusted-seller-gold-vector-icon-white-background-88325916.jpg">
+                <h2>100% Trusted Tour Agency</h2>
+            </div>
+            <div class="service-item">
+                <img src="https://media.istockphoto.com/id/1303877287/vector/paper-checklist-and-pencil-flat-pictogram.jpg?s=612x612&w=0&k=20&c=NoqPzn94VH2Pm7epxF8P5rCcScMEAiGQ8Hv_b2ZwRjY=">
+                <h2>28+ Years of Travel Experience</h2>
+            </div>
+            <div class="service-item">
+                <img src="https://t3.ftcdn.net/jpg/03/22/34/90/360_F_322349054_uMb7IxtLv6TkdeCTLVaEWIh3n5LmUluE.jpg">
+                <h2>98% Our Travelers are Happy</h2>
+            </div>
+        </section>
+        <!--==============Places===================-->
+        <section id = "places" class="places">
+            <div class="places-text">
+                <small>FEATURED TOURS PACKAGES(Outside India)</small>
+                <h2>Favourite Places</h2>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="zoom-img">
+                        <div class="img-card">
+                            <img
+                                src="assets/img/discover1.jpg">
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <h2>Bali</h2>
+                        <p class="cost">$1870 / Per Person</p>
+                        <div class="card-box" onclick="Apply('Bali')">
+                            <p class="time">🕓 5 Days</p>
+                            <p class="location">✈ Vancouver,Canada</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="zoom-img">
+                        <div class="img-card">
+                            <img src="assets\img\place1.jpg">
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <h2>The Dark Forest Adventure</h2>
+                        <p class="cost">$3000 / Per Person</p>
+                        <div class="card-box" onclick="Apply('The Dark Forest Adventure')">
+                            <p class="time">🕓 1 Days</p>
+                            <p class="location">✈ Paris, France</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="zoom-img">
+                        <div class="img-card">
+                            <img src="assets/img/discover2.jpg">
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <h2>Hawaii</h2>
+                        <p class="cost">$10000 / Per Person</p>
+                        <div class="card-box" onclick="Apply('Hawaii')">
+                            <p class="time">🕓 6 Days</p>
+                            <p class="location">✈ Monaco, Monaco</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="zoom-img">
+                        <div class="img-card">
+                            <img
+                                src="assets/img/discover3.jpg">
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <h2>Hvar</h2>
+                        <p class="cost">$2000 / Per Person</p>
+                        <div class="card-box"onclick="Apply('Hvar')">
+                            <p class="time">🕓 2 Days</p>
+                            <p class="location">✈ Bern, Switzerland</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="zoom-img">
+                        <div class="img-card">
+                            <img src="assets/img/discover4.jpg">
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <h2>Whitehaven</h2>
+                        <p class="cost">$1500 / Per Person</p>
+                        <div class="card-box" onclick="Apply('Whitehaven')">
+                            <p class="time">🕓 3 Days</p>
+                            <p class="location">✈ Seoul, South Korea</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="zoom-img">
+                        <div class="img-card">
+                            <img
+                                src="assets\img\place4.jpg">
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <h2>Vietnam</h2>
+                        <p class="cost">$3000 / Per Person</p>
+                        <div class="card-box" onclick="Apply('Vietnam')">
+                            <p class="time">🕓 5 Days</p>
+                            <p class="location">✈ Hanoi, Asia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--===========About Us===============-->
+        <div class="About-us">
+
+        </div>
+
+        <!--===========Footer=================-->
+        <div class="footer">
+            <div class="links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li>Offers & Discounts</li>
+                    <li>Get Coupon</li>
+                    <li>Contact Us</li>
+                    <li>About</li>
+                </ul>
+            </div>
+            <div class="links">
+                <h3>New Products</h3>
+                <ul>
+                    <li>Woman Cloth</li>
+                    <li>Fashion Accessories</li>
+                    <li>Man Accessories</li>
+                    <li>Rubber made Toys</li>
+                </ul>
+            </div>
+            <div class="links">
+                <h3>Support</h3>
+                <ul>
+                    <li>Frequently Asked Questions</li>
+                    <li>Report a Payment Issue</li>
+                    <li>Terms & Conditions</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+        </div>
+
+         <!--===========Model Box=================-->
+
+         <script src= "https://cdn.jsdelivr.net/npm/sweetalert2@10"> </script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10" />          
+    </body>
+
+</html>
+</body>
+
+</html>

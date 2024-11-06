@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/img/Icon2.png" type="image/png">
+  <title>Login</title>
+
+  <style>
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+    * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+ background-image: url('assets/img/Bg.jpeg'); /* URL to your image */
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+}
+
+.container {
+  width: 40vw;
+  height: 80vh;
+  padding: 0 5rem;
+  background-color: #ece3a3;
+  border-radius: 30px;  display: flex;
+  flex-flow: row;
+  flex: 1;
+  border: lightcyan solid 1px;
+  text-align: center;
+  margin:75px 460px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container:hover {
+  box-shadow: 3px 3px 20px  rgba(0, 0, 0, 0.4);
+}
+
+.login-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+form {
+  width: 340px;
+  padding-bottom: 90px;
+}
+
+.login-content img {
+  height: 100px;
+}
+
+.login-content h2 {
+  margin: 15px 0;
+  color: #333;
+  font-size: 2.9rem;
+}
+
+.login-content .input-div {
+  position: relative;
+  display: grid;
+  margin: 25px 0;
+  padding: 5px 0;
+  border-bottom: 2px solid #d9d9d9;
+}
+
+.login-content .input-div.one {
+  margin-top: 0;
+}
+
+.input-div, input
+{
+  padding: 5px;
+  padding-bottom: 0.5px;
+  margin-right: 7px;
+  font-size: 20px;
+  font-family: "Poppins";
+  border-radius: 10px;
+  outline: 0;
+  border: none;
+
+  
+}
+
+h5{
+  font-family: "Poppins";
+  font-size: 20px;
+  color: #191d34;
+  letter-spacing: 1px;
+}
+
+a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #999;
+  font-size: 0.9rem;
+  transition: 0.3s;
+} 
+
+a:hover {
+  color: coral;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  background-image: linear-gradient(to right, #e88747, coral, #e88747);
+  background-size: 200%;
+  font-size: 1.2rem;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+.btn:hover {
+  background-position: right;
+}    
+
+img{
+  border-radius: 50%;
+}
+span
+{
+  color: black;
+  font-family: Satisfy;
+}
+  </style>
+  <script src="assets/js/main.js"></script>
+</head>
+<body  onload="LoadContent()" oncontextmenu="alert('Right Click is Disabled!!!');return false">
+<div class="container">
+  <div class="login-content">
+    <form name = "MyForm_Login">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBvz_ABLBDA15QskXlrYCGtHl0nCFAsVJt8TtiWWxd3Lc38j5j" />
+      <h2 class="title">Welcome to <span> TraveLux </span></h2>
+      <div class="input-div one">
+        <div class="div">
+          <h5>Username</h5>
+          <input type="text" class="input" id = "input" required/>
+        </div>
+      </div>
+      <div class="input-div pass">  
+        <div class="div">
+          <h5>Password</h5>
+          <input type="password" class="input" id = "password" required/>
+        </div>
+      </div>
+      <a onclick = "retrive()" href="#">Forgot Password?</a>
+      <input type="button" class="btn" value="Login" onclick="Ensure()"/>
+    </form>
+  </div>
+</div>
+        <script src= "https://cdn.jsdelivr.net/npm/sweetalert2@10"> </script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10" />   
+</body>
+</html>
